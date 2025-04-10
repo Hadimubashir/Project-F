@@ -1,0 +1,89 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #007bff;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.left-side, .right-side {
+  width: 48%;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#room-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.room {
+  width: 60px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.room.available {
+  background-color: green;
+  color: white;
+}
+
+.room.booked {
+  background-color: red;
+  color: white;
+}
+
+#price-display {
+  font-size: 24px;
+  font-weight: bold;
+  color: #007bff;
+}
+
+#bill-button {
+  display: block;
+  width: 200px;
+  margin: 20px auto;
+  padding: 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#bill-button:hover {
+  background-color: #0056b3;
+}

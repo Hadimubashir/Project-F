@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Altaj Rooms and Hotels - Billing</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Altaj Rooms and Hotels</h1>
+  </header>
+
+  <main>
+    <!-- Left Side -->
+    <div class="left-side">
+      <!-- Check-in Date and Time -->
+      <div class="form-group">
+        <label for="checkin">Check-in Date and Time:</label>
+        <input type="datetime-local" id="checkin" value="<?php echo date('Y-m-d\TH:i'); ?>">
+      </div>
+
+      <!-- Available Rooms -->
+      <div class="form-group">
+        <label>Available Rooms:</label>
+        <div id="room-list">
+          <!-- Rooms will be dynamically generated here -->
+        </div>
+      </div>
+
+      <!-- Customer Name -->
+      <div class="form-group">
+        <label for="customer-name">Customer Name:</label>
+        <input type="text" id="customer-name" placeholder="Enter customer name">
+      </div>
+    </div>
+
+    <!-- Right Side -->
+    <div class="right-side">
+      <!-- Check-out Date and Time -->
+      <div class="form-group">
+        <label for="checkout">Check-out Date and Time:</label>
+        <input type="datetime-local" id="checkout">
+      </div>
+
+      <!-- Number of Persons -->
+      <div class="form-group">
+        <label for="persons">Number of Persons:</label>
+        <select id="persons">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+
+      <!-- ID Proof -->
+      <div class="form-group">
+        <label for="id-proof">ID Proof:</label>
+        <select id="id-proof">
+          <option value="adhaar">Adhaar Card</option>
+          <option value="voter">Voter ID</option>
+          <option value="driving">Driving License</option>
+        </select>
+      </div>
+
+      <!-- ID Number -->
+      <div class="form-group">
+        <label for="id-number">ID Number:</label>
+        <input type="text" id="id-number" placeholder="Enter ID number">
+      </div>
+
+      <!-- Price Display -->
+      <div class="form-group">
+        <label>Total Price:</label>
+        <div id="price-display">0 Rs</div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Bill Button -->
+  <button id="bill-button" onclick="generateBill()">Generate Bill</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
